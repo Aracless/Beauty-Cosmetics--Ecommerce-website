@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beauty Cee/Home</title>
+
+     <!-- GOOGLE FONT -->
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+     rel="stylesheet"/>
+     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+     
+     <link rel="stylesheet" href="index.css" />
+
+	<style type="text/css">
+			
+		.slide-container{
+			position: relative;
+			width: 100%;
+			height: 350px;
+			border: 3px solid #ede6d6;
+			box-shadow: 0 0 8px 2px rgba(0,0,0,0.2);
+		}
+		.slide-container .slides{
+			width: 100%;
+			height: calc(100% - 40px);
+			position: relative;
+			overflow: hidden;
+		}
+		.slide-container .slides img{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			object-fit: cover;
+		}
+		.slide-container .slides img:not(.active){
+			top: 0;
+			left: -100%;
+		}
+		span.next, span.prev{
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			padding: 14px;
+			color: #eee;
+			font-size: 24px;
+			font-weight: bold;
+			transition: 0.5s;
+			border-radius: 3px;
+			user-select: none;
+			cursor: pointer;
+			z-index: 1;
+		}
+		span.next{
+			right: 20px;
+		}
+		span.prev{
+			left: 20px;
+		}
+		span.next:hover, span.prev:hover{
+			background-color: #ede6d6;
+			opacity: 0.8;
+			color: #222;
+		} 
+		.dotsContainer{
+			position: absolute;
+			bottom: 5px;
+			z-index: 3;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+		.dotsContainer .dot{
+			width: 15px;
+			height: 15px;
+			margin: 0px 2px;
+			border: 3px solid #bbb;
+			border-radius: 50%;
+			display: inline-block;
+			cursor: pointer;
+			transition: background-color 0.6s ease;
+		}
+		.dotsContainer .active{
+			background-color: #555;
+		}
+		.c-button {
+position: absolute;
+bottom: 0;
+left: 50%;
+transform: translate(-50%);
+padding: 10px 20px;
+background-color: #ff4089;
+color: white;
+border: none;
+font-size: 24px;
+transition: 0.5s;
+border-radius: 3px;
+user-select: none;
+cursor: pointer;
+z-index: 2;
+margin-bottom: 20px;
+}
+
+.c-button:hover {
+    background: #dadada;
+}
+
+
+		@keyframes next1{
+			from{
+				left: 0%
+			}
+			to{
+				left: -100%;
+			}
+		}
+		@keyframes next2{
+			from{
+				left: 100%
+			}
+			to{
+				left: 0%;
+			}
+		}
+
+		@keyframes prev1{
+			from{
+				left: 0%
+			}
+			to{
+				left: 100%;
+			}
+		}
+		@keyframes prev2{
+			from{
+				left: -100%
+			}
+			to{
+				left: 0%;
+			}
+		}
+
+	</style>
+</head>
+<body>
+    <div class="container">
+        <!-- NAV MENU-->
+          <div class="navbar">
+          <div class="logo">
+           <a href="HOME.html"> <img src="../A WEB PROJECT/Images/logo.png" width="150px" height="60"/></a>
+          </div>
+          <nav>
+            <ul id="MenuItems" style="max-height: 0px;">
+              <li><a href="HOME.html">Home</a></li>
+              <li><a href="Fproduct.html">Products</a></li>
+              <li><a href="Fabout.html">About</a></li>
+              <li><a href="Fcontact.html">Contact Us</a></li>
+            </ul>
+          </nav>
+        
+         <div class="search"> 
+             <input type="search" value="" placeholder="Search">
+             <!--<input type="submit" value=""> -->
+             <label class="icon">
+             <span class="fas fa-search"></span>
+            </label>
+          </div>
+               
+          <a href="LOGIN.html"> <i class="fas fa-solid fa-user fa-lg" style="padding-left: 13px; padding-right: 10px;"></i></a>
+          <!--<img src="../A WEB PROJECT/Images/menu.png" class="menu-icon" onclick="menutoggle()"> -->
+     </div>
+     </div>
+ 
+     
+    <div class="slide-container">
+        <div class="slides">
+            <div id="image1">
+                <img src="images/banner1.jpg" class="active">
+				<a href="LOGIN.html" target="_blank"><button class="c-button">Buy Now</button></a>
+               
+            </div>
+            <div id="image2">
+                <img src="images/banner2.jpg">
+                <a href="LOGIN.html" target="_blank"><button class="c-button">Buy Now</button></a>
+            </div>
+            <div id="image3">
+                <img src="images/banner3.jpg">
+                <a href="LOGIN.html" target="_blank"><button class="c-button">Buy Now</button></a>
+            </div>
+            <div id="image4">
+                <img src="images/banner1.jpg">
+                <a href="LOGIN.html" target="_blank"><button class="c-button">Buy Now</button></a>
+            </div>
+        </div>
+	
+
+	<div class="buttons">
+		<span class="next">&#10095;</span>
+		<span class="prev">&#10094;</span>
+	</div>
+
+	<div class="dotsContainer">
+		<div class="dot active" attr='0' onclick="switchImage(this)"></div>
+		<div class="dot" attr='1' onclick="switchImage(this)"></div>
+		<div class="dot" attr='2' onclick="switchImage(this)"></div>
+		<div class="dot" attr='3' onclick="switchImage(this)"></div>
+		
+	</div>
+
+</div>
+
+<script type="text/javascript">
+	
+	// Access the Images
+	let slideImages = document.querySelectorAll('img');
+	// Access the next and prev buttons
+	let next = document.querySelector('.next');
+	let prev = document.querySelector('.prev');
+	// Access the indicators
+	let dots = document.querySelectorAll('.dot');
+
+	var counter = 0;
+
+	// Code for next button
+	next.addEventListener('click', slideNext);
+	function slideNext(){
+	slideImages[counter].style.animation = 'next1 0.5s ease-in forwards';
+	if(counter >= slideImages.length-1){
+		counter = 0;
+	}
+	else{
+		counter++;
+	}
+	slideImages[counter].style.animation = 'next2 0.5s ease-in forwards';
+	indicators();
+	}
+
+	// Code for prev button
+	prev.addEventListener('click', slidePrev);
+	function slidePrev(){
+	slideImages[counter].style.animation = 'prev1 0.5s ease-in forwards';
+	if(counter == 0){
+		counter = slideImages.length-1;
+	}
+	else{
+		counter--;
+	}
+	slideImages[counter].style.animation = 'prev2 0.5s ease-in forwards';
+	indicators();
+	}
+
+	// Auto slideing
+	function autoSliding(){
+		deletInterval = setInterval(timer, 3000);
+		function timer(){
+			slideNext();
+			indicators();
+		}
+	}
+	autoSliding();
+
+	// Stop auto sliding when mouse is over
+	const container = document.querySelector('.slide-container');
+	container.addEventListener('mouseover', function(){
+		clearInterval(deletInterval);
+	});
+
+	// Resume sliding when mouse is out
+	container.addEventListener('mouseout', autoSliding);
+
+	// Add and remove active class from the indicators
+	function indicators(){
+		for(i = 0; i < dots.length; i++){
+			dots[i].className = dots[i].className.replace(' active', '');
+		}
+		dots[counter].className += ' active';
+	}
+
+	// Add click event to the indicator
+	function switchImage(currentImage){
+		currentImage.classList.add('active');
+		var imageId = currentImage.getAttribute('attr');
+		if(imageId > counter){
+		slideImages[counter].style.animation = 'next1 0.5s ease-in forwards';
+		counter = imageId;
+		slideImages[counter].style.animation = 'next2 0.5s ease-in forwards';
+		}
+		else if(imageId == counter){
+			return;
+		}
+		else{
+		slideImages[counter].style.animation = 'prev1 0.5s ease-in forwards';
+		counter = imageId;
+		slideImages[counter].style.animation = 'prev2 0.5s ease-in forwards';	
+		}
+		indicators();
+	}
+
+</script>
+ <script>
+  var MenuItems = document.getElementById("MenuItems");
+  MenuItems.style.maxHeight = "0px";
+
+  function menutoggle(){
+    if(MenuItems.style.maxHeight == "0px")
+    {
+     MenuItems.style.maxHeight = "200px";
+    }
+    else
+    {
+     MenuItems.style.maxHeight = "0px";
+    }
+  }
+</script>
+
+ 
+</body>
+</html>
