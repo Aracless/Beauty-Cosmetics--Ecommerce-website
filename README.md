@@ -1,4 +1,4 @@
-https://aracless.github.io/Beauty-Cosmetics--Ecommerce-website/
+ https://aracless.github.io/Beauty-Cosmetics-website/
 
 - ALVAREZ, APRIL ROSE
 - ALEJO, AYANA JADE
