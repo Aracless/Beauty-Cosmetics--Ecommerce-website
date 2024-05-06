@@ -13,135 +13,6 @@
      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
      
      <link rel="stylesheet" href="Assets/index.css" />
-     
-     <style type="text/css">
-      
-      .slide-container{
-        position: relative;
-        width: 100%;
-        height: 350px;
-        border: 3px solid #ede6d6;
-        box-shadow: 0 0 8px 2px rgba(0,0,0,0.2);
-      }
-      .slide-container .slides{
-        width: 100%;
-        height: calc(100% - 40px);
-        position: relative;
-        overflow: hidden;
-      }
-      .slide-container .slides img{
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        object-fit: cover;
-      }
-      .slide-container .slides img:not(.active){
-        top: 0;
-        left: -100%;
-      }
-      span.next, span.prev{
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        padding: 14px;
-        color: #eee;
-        font-size: 24px;
-        font-weight: bold;
-        transition: 0.5s;
-        border-radius: 3px;
-        user-select: none;
-        cursor: pointer;
-        z-index: 1;
-      }
-      span.next{
-        right: 20px;
-      }
-      span.prev{
-        left: 20px;
-      }
-      span.next:hover, span.prev:hover{
-        background-color: #ede6d6;
-        opacity: 0.8;
-        color: #222;
-      } 
-      .dotsContainer{
-        position: absolute;
-        bottom: 5px;
-        z-index: 3;
-        left: 50%;
-        transform: translateX(-50%);
-      }
-      .dotsContainer .dot{
-        width: 15px;
-        height: 15px;
-        margin: 0px 2px;
-        border: 3px solid #bbb;
-        border-radius: 50%;
-        display: inline-block;
-        cursor: pointer;
-        transition: background-color 0.6s ease;
-      }
-      .dotsContainer .active{
-        background-color: #555;
-      }
-      .c-button {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%);
-  padding: 10px 20px;
-  background-color: #ff4089;
-  color: white;
-  border: none;
-  font-size: 24px;
-  transition: 0.5s;
-  border-radius: 3px;
-  user-select: none;
-  cursor: pointer;
-  z-index: 2;
-  margin-bottom: 20px;
-  }
-  
-  .c-button:hover {
-      background: #dadada;
-  }
-  
-  
-      @keyframes next1{
-        from{
-          left: 0%
-        }
-        to{
-          left: -100%;
-        }
-      }
-      @keyframes next2{
-        from{
-          left: 100%
-        }
-        to{
-          left: 0%;
-        }
-      }
-  
-      @keyframes prev1{
-        from{
-          left: 0%
-        }
-        to{
-          left: 100%;
-        }
-      }
-      @keyframes prev2{
-        from{
-          left: -100%
-        }
-        to{
-          left: 0%;
-        }
-      }
-  
-     </style>
     </head>
 
   
@@ -170,72 +41,47 @@
           </div>
                
           <a href="Accountpage/Login/Login.html"> <i class="fas fa-solid fa-user fa-lg" style="padding-left: 13px; padding-right: 10px;"></i></a>
-          <!--<img src="../A WEB PROJECT/Images/menu.png" class="menu-icon" onclick="menutoggle()"> -->
+          </div>
      </div>
-     </div>
+      <!--  
+     <img src="Assets/Images/menu-icon.png" class="menu-icon" onclick="menutoggle()">--> 
+    
  
      
           <!-- END NAV MENU-->
-     <div class="slide-container">
-            <div class="slides">
-                <div id="image1">
-                    <img src="images/banner1.jpg" class="active">
-            <a href="LOGIN.html" target="_blank"><button class="c-button">Buy Now</button></a>
-                   
-                </div>
-                <div id="image2">
-                    <img src="../A WEB PROJECT/Assets/Images/banner2.jpg">
-                    <a href="LOGIN.html" target="_blank"><button class="c-button">Buy Now</button></a>
-                </div>
-                <div id="image3">
-                    <img src="images/banner3.jpg">
-                    <a href="LOGIN.html" target="_blank"><button class="c-button">Buy Now</button></a>
-                </div>
-                <div id="image4">
-                    <img src="images/banner1.jpg">
-                    <a href="LOGIN.html" target="_blank"><button class="c-button">Buy Now</button></a>
-                </div>
-            </div>
-    
-      <div class="buttons">
-        <span class="next">&#10095;</span>
-        <span class="prev">&#10094;</span>
-      </div>
-    
-      <div class="dotsContainer">
-        <div class="dot active" attr='0' onclick="switchImage(this)"></div>
-        <div class="dot" attr='1' onclick="switchImage(this)"></div>
-        <div class="dot" attr='2' onclick="switchImage(this)"></div>
-        <div class="dot" attr='3' onclick="switchImage(this)"></div>
-        
-      </div>
-    
-    </div>
           
-   
-        <!-- Slider Ad-->
-        <div class="header">
-        <hr class="title">
-        <div class="row">
-          <div class="col-2">
-            <h1>
-             Welcome its <br/>BEAUTY <br/> CEE!
-            </h1>
-            <p>
-              "Trust something in a our cosmetic store and assume it's good. Beauty begins the moment you decide to be yourself- 
-              <br/>go fot it. Beauty is within!"
-            </p>
-            <a href="Productpage/Product.html" class="btn1">Shop Now &#10140;</a>
-          </div>
-          <div class="col-2">
-            <img src="Assets/Images/imagelogin.jpg" alt="">
-          </div>
-        </div>
-        <!-- END Slider Ad-->
-      
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+          <div class="numbertext">1 / 4</div>
+          <img src="Assets/Images/Slider (1).jpg" style="width:100%">
+          <a href="Productpage/Lipspage/5lip.html" target="_blank"><div class="text">Buy Now</div>
       </div>
-    </div>
- 
+      <div class="mySlides fade">
+          <div class="numbertext">2 / 4</div>
+          <img src="Assets/Images/Slider (2).jpg" style="width:100%">
+          <a href="Productpage/Eyepage/14eye.html" target="_blank"><div class="text">Buy Now</div>
+      </div>
+      <div class="mySlides fade">
+          <div class="numbertext">3 / 4</div>
+          <img src="Assets/Images/Slider (3).jpg" style="width:100%">
+          <a href="Productpage/Facepage/9face.html" target="_blank"><div class="text">Buy Now</div>
+      </div>
+      <div class="mySlides fade">
+          <div class="numbertext">4 / 4</div>
+          <img src="Assets/Images/Slider (4).jpg" style="width:100%">
+          <a href="Productpage/Facepage/7face.html" target="_blank"><div class="text">Buy Now</div>
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+  </div>     
 
      <!-- -----CATEGORIES---- -->
 <div class="small-container">   
@@ -283,9 +129,10 @@
       </a>
       <span> <a href="Productpage/Facepage/3face.html"><button class="add-to-cart-btn">View More</button></a></span>
     </div>
+
     <div class="col-4">
       <img src="Productpage/Eyepage/Images/clear-mascara.jpg" alt="">
-      <h4><a href="LOGIN.html" target="_blank">Clear Mascara</a></h4>
+      <h4><a href="Productpage/Eyepage/1eye.html" target="_blank">Clear Mascara</a></h4>
      
       <div class="rating">
        <i class="fas fa-star"></i>
@@ -295,14 +142,14 @@
        <i class="far fa-star"></i>
        <p>$20</p>
      </div>
-      <a href="LOGIN.html"><button class="add-to-cart-btn">Add to Cart</button>
+      <a href="Accountpage/Login/Login.html"><button class="add-to-cart-btn">Add to Cart</button>
     </a>
-      <span> <a href="LOGIN.html"><button class="add-to-cart-btn">View More</button></a></span>
+      <span> <a href="Productpage/Eyepage/1eye.html"><button class="add-to-cart-btn">View More</button></a></span>
     </div>
 
     <div class="col-4">
       <img src="Productpage/Facepage/Images/Powder-Contour-Light.jpg" alt="">
-      <h4><a href="LOGIN.html" target="_blank">Powder Contour</a></h4>
+      <h4><a href="Productpage/Facepage/1face.html" target="_blank">Powder Contour</a></h4>
       <div class="rating">
         <i class="fas fa-star"></i>
         <i class="fas fa-star"></i>
@@ -311,13 +158,14 @@
         <i class="far fa-star"></i><br>
         <del>$140</del> <span>$70 </span>
       </div>
-      <a href="LOGIN.html"><button class="add-to-cart-btn">Add to Cart</button>
+      <a href="Accountpage/Login/Login.html"><button class="add-to-cart-btn">Add to Cart</button>
       </a>
-      <span> <a href="LOGIN.html"><button class="add-to-cart-btn"></a>View More</button></a></span>
+      <span> <a href="Productpage/Facepage/1face.html"><button class="add-to-cart-btn"></a>View More</button></a></span>
     </div>
+
     <div class="col-4">
       <img src="Productpage/Eyepage/Images/Clear-EyebrowLift.jpg" alt="">
-      <h4><a href="LOGIN.html" target="_blank">Eyebrow Fix Sculpting Gel</a></h4>
+      <h4><a href="Productpage/Eyepage/4eye.html" target="_blank">Eyebrow Fix Sculpting Gel</a></h4>
       <div class="rating">
        <i class="fas fa-star"></i>
        <i class="fas fa-star"></i>
@@ -326,13 +174,14 @@
        <i class="far fa-star"></i><br>
        <del>$50</del> <span>$25</span>
      </div>
-      <a href="LOGIN.html"><button class="add-to-cart-btn">Add to Cart</button>
+      <a href="Accountpage/Login/Login.html"><button class="add-to-cart-btn">Add to Cart</button>
       </a>
-        <span> <a href="LOGIN.html"><button class="add-to-cart-btn">View More</button></a></span>
+        <span> <a href="Productpage/Eyepage/4eye.html"><button class="add-to-cart-btn">View More</button></a></span>
     </div>
+
     <div class="col-4">
       <img src="Productpage/Accessoriespage/Images/MakeupBag-Black.jpg" alt="">
-      <h4><a href="LOGIN.html" target="_blank">Make Up Bag</a></h4>
+      <h4><a href="Productpage/Accessoriespage/10access.html" target="_blank">Make Up Bag</a></h4>
       <div class="rating">
        <i class="fas fa-star"></i>
        <i class="fas fa-star"></i>
@@ -341,13 +190,14 @@
        <i class="far fa-star"></i><br>
        <del>$150</del> <span>$75</span>
       </div>
-      <a href="LOGIN.html"><button class="add-to-cart-btn">Add to Cart</button>
+      <a href="Accountpage/Login/Login.html"><button class="add-to-cart-btn">Add to Cart</button>
       </a>
-        <span> <a href="LOGIN.html"><button class="add-to-cart-btn">View More</button></a></span>
+        <span> <a href="Productpage/Accessoriespage/10access.html"><button class="add-to-cart-btn">View More</button></a></span>
     </div>
+
     <div class="col-4">
       <img src="Productpage/Accessoriespage/Images/eyebrow-trimmer.jpg" alt="">
-      <h4><a href="LOGIN.html" target="_blank">Eyebrow Trimmer</a></h4>
+      <h4><a href="Productpage/Accessoriespage/16access.html" target="_blank">Eyebrow Trimmer</a></h4>
       <div class="rating">
        <i class="fas fa-star"></i>
        <i class="fas fa-star"></i>
@@ -356,13 +206,13 @@
        <i class="far fa-star"></i>
      </div>
       <p>$5</p>
-      <a href="LOGIN.html"><button class="add-to-cart-btn">Add to Cart</button>
+      <a href="Accountpage/Login/Login.html"><button class="add-to-cart-btn">Add to Cart</button>
       </a>
-        <span> <a href="LOGIN.html"><button class="add-to-cart-btn">View More</button></a></span>
+        <span> <a href="Productpage/Accessoriespage/16access.html"><button class="add-to-cart-btn">View More</button></a></span>
     </div>
       <div class="col-4">
         <img src="Productpage/Eyepage/Images/Mascara.jpg" alt="">
-        <h4><a href="LOGIN.html" target="_blank">Mascara</a></h4>
+        <h4><a href="Productpage/Eyepage/3eye.html" target="_blank">Mascara</a></h4>
         <div class="rating">
          <i class="fas fa-star"></i>
          <i class="fas fa-star"></i>
@@ -371,13 +221,13 @@
          <i class="far fa-star"></i>
        </div>
         <p>$15</p>
-        <a href="LOGIN.html"><button class="add-to-cart-btn">Add to Cart</button>
+        <a href="Accountpage/Login/Login.html"><button class="add-to-cart-btn">Add to Cart</button>
         </a>
-          <span> <a href="LOGIN.html"><button class="add-to-cart-btn">View More</button></a></span>
+          <span> <a href="Productpage/Eyepage/3eye.html"><button class="add-to-cart-btn">View More</button></a></span>
       </div>
     <div class="col-4">
       <img src="Productpage/Accessoriespage/Images/Mirror-Black--Square.jpg" alt="">
-      <h4><a href="LOGIN.html" target="_blank">Vanity Mirror</a></h4>
+      <h4><a href="Productpage/Accessoriespage/11access.html" target="_blank">Vanity Mirror</a></h4>
       <div class="rating">
         <i class="fas fa-star"></i>
         <i class="fas fa-star"></i>
@@ -386,12 +236,11 @@
         <i class="far fa-star"></i>
       </div>
       <p>$250</p>
-      <a href="LOGIN.html"><button class="add-to-cart-btn">Add to Cart</button>
+      <a href="Accountpage/Login/Login.html"><button class="add-to-cart-btn">Add to Cart</button>
       </a>
-        <span> <a href="LOGIN.html"><button class="add-to-cart-btn">View More</button></a></span>
+        <span> <a href="Productpage/Accessoriespage/11access.html"><button class="add-to-cart-btn">View More</button></a></span>
     </div>
   </div>
-</div>
   <!-- ---------END FEATURED PRODUCTS--------   -->
 
    <!-- --------NEW ARRIVALS--------   -->
@@ -399,7 +248,7 @@
    <div class="row">
      <div class="col-4">
        <img src="Productpage/Accessoriespage/Images/MakeupBag-Black.jpg" alt="">
-       <h4><a href="LOGIN.html" target="_blank">Makeup Bag</a></h4>
+       <h4><a href="Productpage/Accessoriespage/10access.html" target="_blank">Makeup Bag</a></h4>
        <div class="rating">
         <i class="fas fa-star"></i>
         <i class="fas fa-star"></i>
@@ -408,13 +257,14 @@
         <i class="far fa-star"></i>
       </div>
        <del>$150</del> <span>$75</span><br>
-       <a href="LOGIN.html"><button class="add-to-cart-btn">Add to Cart</button>
+       <a href="Accountpage/Login/Login.html"><button class="add-to-cart-btn">Add to Cart</button>
        </a>
-         <span> <a href="LOGIN.html"><button class="add-to-cart-btn">View More</button></a></span>
+         <span> <a href="Productpage/Accessoriespage/10access.html"><button class="add-to-cart-btn">View More</button></a></span>
      </div>
+
      <div class="col-4">
        <img src="Productpage/Accessoriespage/Images/Makeup-BrushesSet.jpg" alt="">
-       <a href="LOGIN.html" target="_blank"><h4>Makeup Brush Set</a></h4>
+       <a href="Productpage/Accessoriespage/6access.html" target="_blank"><h4>Makeup Brush Set</a></h4>
        <div class="rating">
         <i class="fas fa-star"></i>
         <i class="fas fa-star"></i>
@@ -423,14 +273,14 @@
         <i class="far fa-star"></i>
       </div>
       <del>$50</del> <span>$25</span><br>
-      <a href="LOGIN.html"><button class="add-to-cart-btn">Add to Cart</button>
+      <a href="Accountpage/Login/Login.html"><button class="add-to-cart-btn">Add to Cart</button>
       </a>
-        <span> <a href="LOGIN.html"><button class="add-to-cart-btn">View More</button></a></span>
+        <span> <a href="Productpage/Accessoriespage/6access.html"><button class="add-to-cart-btn">View More</button></a></span>
 
      </div>
      <div class="col-4">
        <img src="Productpage/Accessoriespage/Images/Mirror-White-Circle.jpg" alt="">
-       <h4><a href="LOGIN.html" target="_blank">Vanity Mirror</a></h4>
+       <h4><a href="Productpage/Accessoriespage/11access.html" target="_blank">Vanity Mirror</a></h4>
        <div class="rating">
         <i class="fas fa-star"></i>
         <i class="fas fa-star"></i>
@@ -439,13 +289,14 @@
         <i class="far fa-star"></i>
       </div>
       <del>$250</del> <span>$125</span><br>
-      <a href="LOGIN.html"><button class="add-to-cart-btn">Add to Cart</button>
+      <a href="Accountpage/Login/Login.html"><button class="add-to-cart-btn">Add to Cart</button>
       </a>
-        <span> <a href="LOGIN.html"><button class="add-to-cart-btn">View More</button></a></span>
+        <span> <a href="Productpage/Accessoriespage/11access.html"><button class="add-to-cart-btn">View More</button></a></span>
      </div>
+
      <div class="col-4">
        <img src="Productpage/Facepage/Images/Liquid-Blush-Chiz.jpg" alt="">
-       <h4><a href="LOGIN.html" target="_blank">Liquid Blush</a></h4>
+       <h4><a href="Productpage/Facepage/10face.html" target="_blank">Liquid Blush</a></h4>
        <div class="rating">
         <i class="fas fa-star"></i>
         <i class="fas fa-star"></i>
@@ -454,13 +305,13 @@
         <i class="far fa-star"></i>
       </div>
       <del>$150</del> <span>$75</span><br>
-      <a href="LOGIN.html"><button class="add-to-cart-btn">Add to Cart</button>
+      <a href="Accountpage/Login/Login.html"><button class="add-to-cart-btn">Add to Cart</button>
       </a>
-        <span> <a href="LOGIN.html"><button class="add-to-cart-btn">View More</button></a></span>
+        <span> <a href="Productpage/Facepage/10face.html"><button class="add-to-cart-btn">View More</button></a></span>
      </div>
      <div class="col-4">
       <img src="Productpage/Eyepage/Images/palette2.jpg" alt="">
-      <h4><a href="LOGIN.html" target="_blank">10 Shades palette</a></h4>
+      <h4><a href="Productpage/Eyepage/5eye.html" target="_blank">10 Shades palette</a></h4>
       <div class="rating">
        <i class="fas fa-star"></i>
        <i class="fas fa-star"></i>
@@ -469,10 +320,14 @@
        <i class="far fa-star"></i>
      </div>
       <p>$90</p>
+      <a href="Accountpage/Login/Login.html"><button class="add-to-cart-btn">Add to Cart</button>
+      </a>
+        <span> <a href="Productpage/Eyepage/5eye.html"><button class="add-to-cart-btn">View More</button></a></span>
     </div>
+
     <div class="col-4">
       <img src="Productpage/Facepage/Images/Face-Primer-White.jpg" alt="">
-      <h4><a href="LOGIN.html" target="_blank">All Matte Primer</a></h4>
+      <h4><a href="Productpage/Facepage/9face.html" target="_blank">All Matte Primer</a></h4>
       <div class="rating">
        <i class="fas fa-star"></i>
        <i class="fas fa-star"></i>
@@ -481,13 +336,14 @@
        <i class="far fa-star"></i>
      </div>
       <p>$52</p>
-      <a href="LOGIN.html"><button class="add-to-cart-btn">Add to Cart</button>
+      <a href="Accountpage/Login/Login.html"><button class="add-to-cart-btn">Add to Cart</button>
       </a>
-        <span> <a href="LOGIN.html"><button class="add-to-cart-btn">View More</button></a></span>
+        <span> <a href="Productpage/Facepage/9face.html"><button class="add-to-cart-btn">View More</button></a></span>
     </div>
+
     <div class="col-4">
       <img src="Productpage/Accessoriespage/Images/MakeupBrush-Cleaner.jpg" alt="">
-      <h4><a href="LOGIN.html" target="_blank">Make Up Brush Cleaner</a></h4>
+      <h4><a href="Productpage/Accessoriespage/14access.html" target="_blank">Make Up Brush Cleaner</a></h4>
       <div class="rating">
        <i class="fas fa-star"></i>
        <i class="fas fa-star"></i>
@@ -496,13 +352,14 @@
        <i class="far fa-star"></i>
      </div>
       <p>$165</p>
-      <a href="LOGIN.html"><button class="add-to-cart-btn">Add to Cart</button>
+      <a href="Accountpage/Login/Login.html"><button class="add-to-cart-btn">Add to Cart</button>
       </a>
-        <span> <a href="LOGIN.html"><button class="add-to-cart-btn">View More</button></a></span>
+        <span> <a href="Productpage/Accessoriespage/14access.html"><button class="add-to-cart-btn">View More</button></a></span>
     </div>
+
     <div class="col-4">
       <img src="Productpage/Eyepage/Images/Eyeshadow-Palette-Glitters.png" alt="">
-      <h4><a href="LOGIN.html" target="_blank">12 Shades Palette</a></h4>
+      <h4><a href="Productpage/Eyepage/12eye.html" target="_blank">12 Shades Palette</a></h4>
       <div class="rating">
        <i class="fas fa-star"></i>
        <i class="fas fa-star"></i>
@@ -511,9 +368,9 @@
        <i class="far fa-star"></i>
      </div>
       <del>$110</del> <span>$55</span><br>
-      <a href="LOGIN.html"><button class="add-to-cart-btn">Add to Cart</button>
+      <a href="Accountpage/Login/Login.html"><button class="add-to-cart-btn">Add to Cart</button>
       </a>
-        <span> <a href="LOGIN.html"><button class="add-to-cart-btn">View More</button></a></span>
+        <span> <a href="Productpage/Eyepage/12eye.html"><button class="add-to-cart-btn">View More</button></a></span>
     </div>
    </div>
    <!-- ---------END NEW ARRIVALS--------   -->
@@ -523,7 +380,7 @@
    <div class="row">
     <div class="col-4">
       <img src="Productpage/Lipspage/Images/Lipstick-Red.jpg" alt="">
-      <h4><a href="LOGIN.html" target="_blank">Lip Stick</a></h4>
+      <h4><a href="Productpage/Lipspage/5lip.html" target="_blank">Lip Stick</a></h4>
       <div class="rating">
        <i class="fas fa-star"></i>
        <i class="fas fa-star"></i>
@@ -532,13 +389,13 @@
        <i class="far fa-star"></i>
      </div>
       <del>$90</del> <span>$36</span><br>
-      <a href="LOGIN.html"><button class="add-to-cart-btn">Add to Cart</button>
+      <a href="Accountpage/Login/Login.html"><button class="add-to-cart-btn">Add to Cart</button>
       </a>
-        <span> <a href="LOGIN.html"><button class="add-to-cart-btn">View More</button></a></span>
+        <span> <a href="Productpage/Lipspage/5lip.html"><button class="add-to-cart-btn">View More</button></a></span>
     </div>
     <div class="col-4">
       <img src="Productpage/Eyepage/Images/Eyeshadow-Palette-Glitters.png" alt="">
-      <h4><a href="LOGIN.html" target="_blank">12 Shades Palette</a></h4>
+      <h4><a href="Productpage/Eyepage/12eye.html" target="_blank">12 Shades Palette</a></h4>
       <div class="rating">
        <i class="fas fa-star"></i>
        <i class="fas fa-star"></i>
@@ -547,13 +404,14 @@
        <i class="far fa-star"></i>
      </div>
       <del>$110</del> <span>$55</span><br>
-      <a href="LOGIN.html"><button class="add-to-cart-btn">Add to Cart</button>
+      <a href="Accountpage/Login/Login.html"><button class="add-to-cart-btn">Add to Cart</button>
       </a>
-        <span> <a href="LOGIN.html"><button class="add-to-cart-btn">View More</button></a></span>
+        <span> <a href="Productpage/Eyepage/12eye.html"><button class="add-to-cart-btn">View More</button></a></span>
     </div>
+
     <div class="col-4">
       <img src="Productpage/Lipspage/Images/season-lipstick.jpg" alt="">
-      <h4><a href="LOGIN.html" target="_blank">Season Lip Stick</a></h4>
+      <h4><a href="Productpage/Lipspage/7lip.html" target="_blank">Season Lip Stick</a></h4>
       <div class="rating">
        <i class="fas fa-star"></i>
        <i class="fas fa-star"></i>
@@ -562,13 +420,14 @@
        <i class="far fa-star"></i>
      </div>
       <del>$80</del> <span>$32</span><br>
-      <a href="LOGIN.html"><button class="add-to-cart-btn">Add to Cart</button>
+      <a href="Accountpage/Login/Login.html"><button class="add-to-cart-btn">Add to Cart</button>
       </a>
-        <span> <a href="LOGIN.html"><button class="add-to-cart-btn">View More</button></a></span>
+        <span> <a href="Productpage/Lipspage/7lip.html"><button class="add-to-cart-btn">View More</button></a></span>
     </div>
+
     <div class="col-4">
       <img src="Productpage/Accessoriespage/Images/Makeup-BrushPad.jpg" alt="">
-      <h4><a href="LOGIN.html" target="_blank">Silicone Brush Cleaner</a></h4>
+      <h4><a href="Productpage/Accessoriespage/7access.html" target="_blank">Silicone Brush Cleaner</a></h4>
       <div class="rating">
        <i class="fas fa-star"></i>
        <i class="fas fa-star"></i>
@@ -577,13 +436,14 @@
        <i class="far fa-star"></i>
      </div>
       <del>$130</del> <span>$65</span><br>
-      <a href="LOGIN.html"><button class="add-to-cart-btn">Add to Cart</button>
+      <a href="Accountpage/Login/Login.html"><button class="add-to-cart-btn">Add to Cart</button>
       </a>
-        <span> <a href="LOGIN.html"><button class="add-to-cart-btn">View More</button></a></span>
+        <span> <a href="Productpage/Accessoriespage/7access.html"><button class="add-to-cart-btn">View More</button></a></span>
     </div>
+
     <div class="col-4">
       <img src="Productpage/Facepage/Images/Setting-Spray1.jpg" alt="">
-      <h4><a href="LOGIN.html" target="_blank">Setting Spray</a></h4>
+      <h4><a href="Productpage/Facepage/14face.html" target="_blank">Setting Spray</a></h4>
       <div class="rating">
        <i class="fas fa-star"></i>
        <i class="fas fa-star"></i>
@@ -592,13 +452,14 @@
        <i class="far fa-star"></i>
      </div>
       <p>$65</p>
-      <a href="LOGIN.html"><button class="add-to-cart-btn">Add to Cart</button>
+      <a href="Accountpage/Login/Login.html"><button class="add-to-cart-btn">Add to Cart</button>
       </a>
-        <span> <a href="LOGIN.html"><button class="add-to-cart-btn">View More</button></a></span>
+        <span> <a href="Productpage/Facepage/14face.html"><button class="add-to-cart-btn">View More</button></a></span>
     </div>
+
     <div class="col-4">
       <img src="Productpage/Lipspage/Images/Shiny-Lipgloss.jpg" alt="">
-      <h4><a href="LOGIN.html" target="_blank">Color Changing Lip Gloss</a></h4>
+      <h4><a href="Productpage/Eyepage/8eye.html" target="_blank">Color Changing Lip Gloss</a></h4>
       <div class="rating">
        <i class="fas fa-star"></i>
        <i class="fas fa-star"></i>
@@ -607,13 +468,14 @@
        <i class="far fa-star"></i>
      </div>
       <del>$35</del> <span>$14</span><br>
-      <a href="LOGIN.html"><button class="add-to-cart-btn">Add to Cart</button></a>
-      <span> <a href="LOGIN.html">
-      <button class="add-to-cart-btn">View More</button></a></span>
+      <a href="Accountpage/Login/Login.html"><button class="add-to-cart-btn">Add to Cart</button></a>
+      <span> 
+        <a href="Productpage/Eyepage/8eye.html"><button class="add-to-cart-btn">View More</button></a></span>
     </div>
+
     <div class="col-4">
       <img src="Productpage/Eyepage/Images/Eyeliner.jpg" alt="">
-      <h4><a href="LOGIN.html" target="_blank">Eyeliner</a></h4>
+      <h4><a href="Productpage/Eyepage/14eye.html" target="_blank">Eyeliner</a></h4>
       <div class="rating">
        <i class="fas fa-star"></i>
        <i class="fas fa-star"></i>
@@ -622,13 +484,14 @@
        <i class="far fa-star"></i>
      </div>
       <del>$20</del> <span>$10</span><br>
-      <a href="LOGIN.html"><button class="add-to-cart-btn">Add to Cart</button>
+      <a href="Accountpage/Login/Login.html"><button class="add-to-cart-btn">Add to Cart</button>
       </a>
-        <span> <a href="LOGIN.html"><button class="add-to-cart-btn">View More</button></a></span>
+        <span> <a href="Productpage/Eyepage/14eye.html"><button class="add-to-cart-btn">View More</button></a></span>
     </div>
+
     <div class="col-4">
       <img src="Productpage/Facepage/Images/Tinted-Moisturizer1.jpg" alt="">
-      <h4><a href="LOGIN.html" target="_blank">Tinted Moisturizer</a></h4>
+      <h4><a href="Productpage/Facepage/17face.html" target="_blank">Tinted Moisturizer</a></h4>
       <div class="rating">
        <i class="fas fa-star"></i>
        <i class="fas fa-star"></i>
@@ -637,16 +500,17 @@
        <i class="far fa-star"></i>
      </div>
       <p>$70</p>
-      <a href="LOGIN.html"><button class="add-to-cart-btn">Add to Cart</button>
+      <a href="Accountpage/Login/Login.html"><button class="add-to-cart-btn">Add to Cart</button>
       </a>
-        <span> <a href="LOGIN.html"><button class="add-to-cart-btn">View More</button></a></span>
+        <span> <a href="Productpage/Facepage/17face.html"><button class="add-to-cart-btn">View More</button></a></span>
     </div>
    </div>
+</div>
    <!-- ---------SALE OFFERS--------   -->
      
 <div class="sale-img">
-  <img src="Images/Sale-Banner.jpg" alt="">
-  <a href="LOGIN.html" class="custom-button">Explore Now</a>
+  <img src="Assets/Images/Sale-Banner.jpg" alt="">
+  <a href="Productpage/Lipspage/Lips.html" class="custom-button">Explore Now</a>
 </div>
 
 
@@ -655,7 +519,7 @@
    <!-- ---------PRODUCT OFFERS--------   -->
 
   <div class="offer">
-    <div class="small-container">
+    <div class="offer-cont">
       <div class="row">
         <div class="col-2">
     <img src="Productpage/Facepage/Images/Face-Primer-GreenBanner.png" class="offer-img">
@@ -668,12 +532,43 @@
       Vitamins A, C, & E to help boost complexion and hydrate your skin.
       <br><br>
       Proud to be cruelty-free and vegan. </small><br>
-    <br><a href="LOGIN.html" target="_blank" class="btn2">Shop Now</a>
+    <br><a href="Productpage/Facepage/7face.html" target="_blank" class="btn2">Buy Now</a>
         </div>
       </div>
     </div>
+  </div>
+
+   
+<!-- ---------END PRODUCT OFFERS---------->
+
+<h2 class="title-3">Customers Reviews</h2>
+<div class="testimonial">
+  <div class="small-container">
+  <div class="row">
+    <div class="col-3">
+      <p>"We are treat the customer as god. Sales are good due to low profit business, customers are satisfied with us because of the price."</p>
+      <img src="Assets/Images/billgates.jpg" alt="">
+      <h3>
+       Values And Beliefs</h3>
+     </div>
+     <div class="col-3">
+       <p>"We are treat the customer as god. Sales are good due to low profit business, customers are satisfied with us because of the price."</p>
+       <img src="Assets/Images/elsa.jpg" alt="">
+       <h3>
+         Build A Connection</h3>
+      </div>
+      <div class="col-3">
+       <p>"We are treat the customer as god. Sales are good due to low profit business, customers are satisfied with us because of the price."
+       </p>
+       <img src="Assets/Images/magnus.jpg" alt="">
+       <h3>
+         Certifications, Awards</h3>
+      </div>
     </div>
-<!-- ---------END PRODUCT OFFERS--------   -->
+  </div>
+ </div>
+
+
 
    <!-- -------footer------ -->
    <footer class="footer">
@@ -697,7 +592,7 @@
         <div class="footer-col" style="padding-left: 50px;">
           <h4>GET HELP</h4>
           <ul>
-            <li><a href="#">FAQ</a></li>
+            <li><a href="Footer/FAQs.html">FAQ</a></li>
             <li><a href="#">Shipping</a></li>
             <li><a href="#">Returns</a></li>
             <li><a href="#">Order Status</a></li>
@@ -710,7 +605,7 @@
               <li><a href="Aboutpage/About.html">About Us</a></li>
               <li><a href="Contactpage/Contact.html">Contact Us</a></li>
               <li><a href="Aboutpage/About.html">Our Services</a></li>
-              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="Footer/PrivacyPolicy.html">Privacy Policy</a></li>
             </ul>
           </div>
           <div class="footer-col" style="padding-left: 100px;  width: 20%;" >
@@ -723,8 +618,9 @@
             </div>
         </div>
       </div>
-      </div>  
+    </div>
  </footer>
+ 
  <script>
   var MenuItems = document.getElementById("MenuItems");
   MenuItems.style.maxHeight = "0px";
@@ -741,94 +637,48 @@
   }
 </script>
 
+
+<script>
+  var slideIndex = 1;
+showSlides(slideIndex);
+function plusSlides(n) {
+showSlides(slideIndex += n);
+}
+function currentSlide(n) {
+showSlides(slideIndex = n);
+}
+function showSlides(n) {
+var i;
+var slides = document.getElementsByClassName("mySlides");
+var dots = document.getElementsByClassName("dot");
+if (n > slides.length) { slideIndex = 1 }
+if (n < 1) { slideIndex = slides.length }
+for (i = 0; i < slides.length; i++) {
+  slides[i].style.display = "none";
+}
+for (i = 0; i < dots.length; i++) {
+  dots[i].className = dots[i].className.replace(" active", "");
+}
+slides[slideIndex - 1].style.display = "block";
+dots[slideIndex - 1].className += " active";
+}
+</script>
+<script>
+  const bar = document.getElementById('bar')
+const close = document.getElementById('close')
+const nav = document.getElementById('navbar')
+
+if (bar) {
+  bar.addEventListener('click', () => {
+    nav.classList.add('active')
+  })
  
-<script type="text/javascript">
-	
-	// Access the Images
-	let slideImages = document.querySelectorAll('img');
-	// Access the next and prev buttons
-	let next = document.querySelector('.next');
-	let prev = document.querySelector('.prev');
-	// Access the indicators
-	let dots = document.querySelectorAll('.dot');
-
-	var counter = 0;
-
-	// Code for next button
-	next.addEventListener('click', slideNext);
-	function slideNext(){
-	slideImages[counter].style.animation = 'next1 0.5s ease-in forwards';
-	if(counter >= slideImages.length-1){
-		counter = 0;
-	}
-	else{
-		counter++;
-	}
-	slideImages[counter].style.animation = 'next2 0.5s ease-in forwards';
-	indicators();
-	}
-
-	// Code for prev button
-	prev.addEventListener('click', slidePrev);
-	function slidePrev(){
-	slideImages[counter].style.animation = 'prev1 0.5s ease-in forwards';
-	if(counter == 0){
-		counter = slideImages.length-1;
-	}
-	else{
-		counter--;
-	}
-	slideImages[counter].style.animation = 'prev2 0.5s ease-in forwards';
-	indicators();
-	}
-
-	// Auto slideing
-	function autoSliding(){
-		deletInterval = setInterval(timer, 3000);
-		function timer(){
-			slideNext();
-			indicators();
-		}
-	}
-	autoSliding();
-
-	// Stop auto sliding when mouse is over
-	const container = document.querySelector('.slide-container');
-	container.addEventListener('mouseover', function(){
-		clearInterval(deletInterval);
-	});
-
-	// Resume sliding when mouse is out
-	container.addEventListener('mouseout', autoSliding);
-
-	// Add and remove active class from the indicators
-	function indicators(){
-		for(i = 0; i < dots.length; i++){
-			dots[i].className = dots[i].className.replace(' active', '');
-		}
-		dots[counter].className += ' active';
-	}
-
-	// Add click event to the indicator
-	function switchImage(currentImage){
-		currentImage.classList.add('active');
-		var imageId = currentImage.getAttribute('attr');
-		if(imageId > counter){
-		slideImages[counter].style.animation = 'next1 0.5s ease-in forwards';
-		counter = imageId;
-		slideImages[counter].style.animation = 'next2 0.5s ease-in forwards';
-		}
-		else if(imageId == counter){
-			return;
-		}
-		else{
-		slideImages[counter].style.animation = 'prev1 0.5s ease-in forwards';
-		counter = imageId;
-		slideImages[counter].style.animation = 'prev2 0.5s ease-in forwards';	
-		}
-		indicators();
-	}
-
+ if (close) {
+   close.addEventListener('click', () => {
+     nav.classList.remove('active')
+   })
+ }
+}
 </script>
   </body>
   </html>
