@@ -1,18 +1,16 @@
 - ALVAREZ, APRIL ROSE
 - ALEJO, AYANA JADE
 
-User/Client
-
- https://aracless.github.io/Beauty-Cosmetics-website/
+User/Client - https://aracless.github.io/Beauty-Cosmetics-website/
 
 
 
 
 
-ADMIN 
+ADMIN - https://aracless.github.io/Beauty-Cosmetics-Admin/
 
 Username: April
 
 Password: 012345
 
-https://aracless.github.io/Beauty-Cosmetics-Admin/
+
